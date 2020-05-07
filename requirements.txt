@@ -1,3 +1,4 @@
 # requirements.txt file
 pandas
 numpy
+random

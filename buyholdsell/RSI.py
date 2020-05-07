@@ -1,4 +1,4 @@
-# my_mod.py
+# RSI.py
 
 def buyholdsell(n):
     """
@@ -10,7 +10,7 @@ def buyholdsell(n):
         print("I'm buying")
     elif (n) in range(30, 71):
         print("I'm holding")
-    elif (n) in range(90, 101):
+    elif (n) in range(70, 101):
         print("I'm selling")
     else:
         print("Your number wasn't in the correct range")

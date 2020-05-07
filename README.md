@@ -7,8 +7,20 @@ TODO
 
 ## Usage
 
+!pip install -i https://test.pypi.org/simple/ buyholdsell==1.3
+
+from buyholdsell.RSI import buyholdsell
+
+buyholdsell(insert number here)
+
 Please choose a number between 1 and 100
  
 and the function in this package will return
 
 whether it would buy, hold, or sell.
+
+
+Also try:
+
+from buyholdsell.DF import buyholdsell
+
