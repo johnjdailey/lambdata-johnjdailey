@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="buyholdsell", # the name that you will install via pip
-    version="1.1",
+    version="1.2",
     author="John Dailey",
     author_email="johnjdailey@email.com",
     description="Give an input and the package function tells you if it will buy, hold, or sell.",
