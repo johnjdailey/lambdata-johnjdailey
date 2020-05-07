@@ -1,13 +1,14 @@
 # DF.py
 
-import pandas
+import pandas as pd
 import random
 
 from buyholdsell.RSI import buyholdsell
+from buyholdsell.cleandata import cleandata
 
 print("HELLO WORLD")
 
-df = pandas.DataFrame({"Number": ["1", "30", "70", "100"]})
+df = pd.DataFrame({"Number": ["1", "30", "70", "100"]})
 print(df.head())
 
 print("-----------------")

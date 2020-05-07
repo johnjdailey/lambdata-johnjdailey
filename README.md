@@ -7,7 +7,19 @@ TODO
 
 ## Usage
 
-!pip install -i https://test.pypi.org/simple/ buyholdsell==1.3
+!pip install -i https://test.pypi.org/simple/ buyholdsell==1.4
+
+Try the cleandata function for data wrangling.
+
+from buyholdsell.cleandata import buyholdsell
+
+Use the cleandata() function to clean dataframes
+
+after train, test, split - in this case for
+
+train, val, and test dataframes.
+
+Also try:
 
 from buyholdsell.RSI import buyholdsell
 
@@ -18,9 +30,3 @@ Please choose a number between 1 and 100
 and the function in this package will return
 
 whether it would buy, hold, or sell.
-
-
-Also try:
-
-from buyholdsell.DF import buyholdsell
-
