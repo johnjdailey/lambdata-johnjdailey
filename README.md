@@ -7,4 +7,8 @@ TODO
 
 ## Usage
 
-TODO
+Please choose a number between 1 and 100
+ 
+and the function in this package will return
+
+whether it would buy, hold, or sell.
