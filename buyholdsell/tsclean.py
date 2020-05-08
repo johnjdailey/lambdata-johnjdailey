@@ -30,13 +30,13 @@ def tsclean(X):
     X = X.dropna()
 
     # Make new df without 0's.
-    X = X[(X != 0).all(1)]
+    X = X.loc[(X != 0).all(1)]
 
     # Drop duplicate rows
     X = X.drop_duplicates
 
     # Drop duplicate columns
-    X = X.loc[:,~X.columns.duplicated()]
+    X = X[:,~X.columns.duplicated()]
 
     # Drop unusable variance
     # unusable_variance = []
