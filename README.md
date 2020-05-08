@@ -3,21 +3,15 @@
 
 ## Installation
 
-!pip install -i https://test.pypi.org/simple/ buyholdsell==1.4
+!pip install -i https://test.pypi.org/simple/ buyholdsell==1.6
 
 ## Usage
 
-!pip install -i https://test.pypi.org/simple/ buyholdsell==1.4
+from buyholdsell.tsclean import tsclean
 
-Try the cleandata function for data wrangling.
+Use the tsclean() function to clean 
 
-from buyholdsell.cleandata import buyholdsell
-
-Use the cleandata() function to clean dataframes
-
-after train, test, split - in this case for
-
-train, val, and test dataframes.
+train and test time series data frames.
 
 Also try:
 
