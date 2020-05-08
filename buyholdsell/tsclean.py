@@ -1,14 +1,13 @@
-# cleandata.py
+# tsclean.py
 
-def cleandata(x):
+def tsclean(X):
 
     import pandas as pd
     import numpy as np
 
     """ 
-    cleans data in dataframes
+    cleans data in train and test time series data frames
     
-    x is a dataframe
     """
 
     # Prevent SettingWithCopyWarning
@@ -40,8 +39,8 @@ def cleandata(x):
     X = X.loc[:,~X.columns.duplicated()]
 
     # Drop unusable variance
-    unusable_variance = []
-    X = X.drop(columns=unusable_variance)
+    # unusable_variance = []
+    # X = X.drop(columns=unusable_variance)
 
     # Convert date to datetime
     X['Date'] = pd.to_datetime(X['Date'], infer_datetime_format=True)
@@ -52,8 +51,8 @@ def cleandata(x):
     X['Day'] = X['Date'].dt.day
     X = X.drop(columns='Date')
 
-    # Return the wrangle dataframe
+    # Return the clean data frames
+    return X
 
-    train = cleandata(train)
-    val = cleandata(val)
-    test = cleandata(test)
+    train = tsclean(train)
+    test = tsclean(test)
