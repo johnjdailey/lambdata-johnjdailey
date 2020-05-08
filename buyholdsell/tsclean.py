@@ -36,7 +36,8 @@ def tsclean(X):
     X = X.drop_duplicates
 
     # Drop duplicate columns
-    X = X[:,~X.columns.duplicated()]
+    # X = X[:,~X.columns.duplicated()]
+    #'function' object has no attribute 'columns'
 
     # Drop unusable variance
     # unusable_variance = []
