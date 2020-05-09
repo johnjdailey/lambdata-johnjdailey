@@ -1,5 +1,6 @@
 # RSI.py
 
+
 def buyholdsell(n):
     """
     Param n is a number.
@@ -14,6 +15,7 @@ def buyholdsell(n):
         print("I'm selling")
     else:
         print("Your number wasn't in the correct range")
+
 
 if __name__ == "__main__":
     # only run the code below IF this script is invoked from the command-line

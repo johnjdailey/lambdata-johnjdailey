@@ -1,59 +1,82 @@
 # tsclean.py
 
+train = df[:int(df.shape[0]*0.7)]
+test = df[int(df.shape[0]*0.7):]
+
+
 def tsclean(X):
 
-    import pandas as pd
-    import numpy as np
+        import pandas as pd
+        import numpy as np
 
-    """ 
-    cleans data in train and test time series data frames
-    
-    """
+        """ 
+        cleans data in train and test time series data frames
+        """
 
-    # Prevent SettingWithCopyWarning
-    X = X.copy()
+        # Prevent SettingWithCopyWarning
+        X = X.copy()
 
-    # Consider code to remove or replace extreme outliers
-    #...
+        # Consider code to remove or replace extreme outliers
+        # ...
 
-    # When columns have zeros and shouldn't, they are like null values.
-    # So we will replace the zeros with nulls, and impute missing values later.
-    # Also create a "missing indicator" column, because the fact that
-    # values are missing may be a predictive signal.
-    
-    # cols_with_zeros = X[(X == 0).all(1)]
-    # for col in cols_with_zeros:
-    #     X[col] = X[col].replace(0, np.nan)
-    #     X[col+'_MISSING'] = X[col].isnull()
+        # When columns have zeros and shouldn't, they are like null values.
+        # So we will replace the zeros with nulls, and impute missing values later.
+        # Also create a "missing indicator" column, because the fact that
+        # values are missing may be a predictive signal.
 
-    # Or just drop Null/NaN values.
-    X = X.dropna()
+        # cols_with_zeros = X[(X == 0).all(1)]
+        # for col in cols_with_zeros:
+        #     X[col] = X[col].replace(0, np.nan)
+        #     X[col+'_MISSING'] = X[col].isnull()
 
-    # Make new df without 0's.
-    X = X.loc[(X != 0).all(1)]
+        # Or just drop Null/NaN values.
+        X = X.dropna()
 
-    # Drop duplicate rows
-    X = X.drop_duplicates
+        # Make new df without 0's.
+        X = X.loc[(X != 0).all(1)]
 
-    # Drop duplicate columns
-    # X = X[:,~X.columns.duplicated()]
-    #'function' object has no attribute 'columns'
+        # Drop duplicate rows
+        X = X.drop_duplicates
 
-    # Drop unusable variance
-    # unusable_variance = []
-    # X = X.drop(columns=unusable_variance)
+        # Add New Columns with Average Prices
+        # This feature has had the most permutation importance
+        X['HL Avg'] = (X['High'] + X['Low'])/2
+        # Testing this new feature (made score worse, but has 3rd highest permutation importance)
+        X['OC Avg'] = (X['Open'] + X['Close'])/2
+        # Test another feature
+        X['HL Range'] = (X['High'] - X['Low'])
+        # Another one (Consider using an if statement, whichever one is higher, then subtract the smaller one, for a true range)
+        X['OC Range'] = (X['Open'] - X['Close'])
 
-    # Convert date to datetime
-    X['Date'] = pd.to_datetime(X['Date'], infer_datetime_format=True)
+        # Drop duplicate columns
+        # X = X[:,~X.columns.duplicated()]
+        # 'function' object has no attribute 'columns'
 
-    # Extract components from Date, then drop the original column
-    X['Year'] = X['Date'].dt.year
-    X['Month'] = X['Date'].dt.month
-    X['Day'] = X['Date'].dt.day
-    X = X.drop(columns='Date')
+        # Drop unusable variance
+        # unusable_variance = []
+        # X = X.drop(columns=unusable_variance)
 
-    # Return the clean data frames
-    return X
+        # Convert date to datetime
+        # X['Date'] = pd.to_datetime(X['Date'], infer_datetime_format=True)
+        # TypeError: 'method' object is not subscriptable
 
-    train = tsclean(train)
-    test = tsclean(test)
+        # Extract components from Date, then drop the original column
+        # X['Year'] = X['Date'].dt.year
+        # X['Month'] = X['Date'].dt.month
+        # X['Day'] = X['Date'].dt.day
+        X = X.drop(columns=['Date'])
+
+        # Return the clean data frames
+        return X
+
+        train = tsclean(train)
+        test = tsclean(test)
+
+
+target = 'High'
+
+# Arrange data into X features matrix and y target vector
+X_train = train.drop(columns=target)
+y_train = train[target]
+X_test = test.drop(columns=target)
+y_test = test[target]

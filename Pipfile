@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 twine = "*"
 autotpep8 = "*"
+autopep8 = "*"
 
 [packages]
 pandas = "*"

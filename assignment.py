@@ -2,6 +2,7 @@ from pandas import DataFrame
 
 # State abbreviation -> Full Name and vice versa. Fl -> FLorida, etc.
 
+
 def add_state_names(my_df):
     """
     Adds a column of state names to accompany a corresponding column of state abbreviations.
@@ -19,16 +20,17 @@ def add_state_names(my_df):
 
     new_df = my_df.copy()
 
-    names_map = {"CA":"Cali", "CO":"Colo", "CT":"Conn"}
-    #type(my_df["abbrev"]) # -> pandas.core.series.Series'
+    names_map = {"CA": "Cali", "CO": "Colo", "CT": "Conn"}
+    # type(my_df["abbrev"]) # -> pandas.core.series.Series'
 
     new_df["name"] = new_df["abbrev"].map(names_map)
 
     return new_df
 
+
 if __name__ == '__main__':
 
-    df = DataFrame({"abbrev":["CA","CO","CT"]})
+    df = DataFrame({"abbrev": ["CA", "CO", "CT"]})
     print(df.head())
 
     df2 = add_state_names(df)
