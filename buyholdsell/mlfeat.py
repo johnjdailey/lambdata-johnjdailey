@@ -1,7 +1,6 @@
 # mlfeat.py
 
 
-
 # Assign a target for predictive modeling
 target = 'High'
 

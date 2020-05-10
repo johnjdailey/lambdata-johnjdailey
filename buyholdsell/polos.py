@@ -1,7 +1,6 @@
 # polos.py
 
 
-
 class Polo:
     def __init__(self, size, color, price=69.99):
         self.size = size

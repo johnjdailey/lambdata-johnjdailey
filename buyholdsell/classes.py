@@ -1,7 +1,6 @@
 # classes.py
 
 
-
 class Stocks():
     def __init__(self, Date, Open, High, Low, Close, Adj_Close, Volume):
         self.Date = Date
@@ -36,17 +35,38 @@ if __name__ == "__main__":
     GOLD.buyStock()
     GOLD.sellStock()
 
-    GLD = Stocks("May 08, 2020", 161.08, 162.00, 160.00, 160.42, 160.42, 12240900) 
+    GLD = Stocks(
+        "May 08, 2020",
+        161.08,
+        162.00,
+        160.00,
+        160.42,
+        160.42,
+        12240900)
     print(GLD.High, GLD.Low)
     GLD.buyStock()
     GLD.sellStock()
 
-    BTC = Cryptos("May 09, 2020", 9820.80, 9908.81, 9796.45, 9802.95, 9802.95, 47370928128)
+    BTC = Cryptos(
+        "May 09, 2020",
+        9820.80,
+        9908.81,
+        9796.45,
+        9802.95,
+        9802.95,
+        47370928128)
     print(BTC.High, BTC.Low)
     BTC.buyCrypto()
     BTC.sellCrypto()
 
-    LTC = Cryptos("May 09, 2020", 47.65, 48.85, 47.65, 48.81, 48.81, 4828417024)
+    LTC = Cryptos(
+        "May 09, 2020",
+        47.65,
+        48.85,
+        47.65,
+        48.81,
+        48.81,
+        4828417024)
     print(LTC.High, LTC.Low)
     LTC.buyCrypto()
     LTC.sellCrypto()
