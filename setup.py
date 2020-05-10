@@ -7,10 +7,10 @@ with open("README.md", "r") as fh:
 
 setup(
     name="buyholdsell",  # the name that you will install via pip
-    version="1.9.6",
+    version="1.9.7",
     author="John Dailey",
     author_email="johnjdailey@email.com",
-    description="Cleans train and test time series data frames. Give an input and the package function tells you if it will buy, hold, or sell.",
+    description="Import Yahoo Finance data from URL, automatically split, feature engineer, drop Date column, and prepare for predictive modeling.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     # required if using a md file for long desc
