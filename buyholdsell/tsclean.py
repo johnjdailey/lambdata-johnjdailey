@@ -1,26 +1,6 @@
 # tsclean.py
 
 
-# Import Packages
-import pandas as pd
-import numpy as np
-
-
-# Enter a CSV
-print("Please, enter the URL of your CSV, without parentheses:")
-df_url = input("")
-# Example URL to be copy and pasted below as the input, or use your own
-# BTC: https://query1.finance.yahoo.com/v7/finance/download/BTCUSD=X?period1=1279238400&period2=1588896000&interval=1d&events=history
-
-
-# Import CSV from URL
-df = pd.read_csv(df_url)
-
-
-# Train/Test Split  ] 
-train = df[:int(df.shape[0]*0.7)]
-test = df[int(df.shape[0]*0.7):]
-
 
 def tsclean(X):
 
@@ -97,5 +77,3 @@ X_train = train.drop(columns=target)
 y_train = train[target]
 X_test = test.drop(columns=target)
 y_test = test[target]
-
-print(X_train.head())
