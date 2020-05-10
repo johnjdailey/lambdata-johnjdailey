@@ -1,10 +1,10 @@
-# DF.py
+# df.py
 
 import pandas as pd
 import random
 
 from buyholdsell.RSI import buyholdsell
-from buyholdsell.tsclean import tsclean
+from buyholdsell.ttclean import ttclean
 
 print("HELLO WORLD")
 
