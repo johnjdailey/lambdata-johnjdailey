@@ -3,13 +3,13 @@
 
 ## Installation
 
-!pip install -i https://test.pypi.org/simple/ buyholdsell==1.9.5
+!pip install -i https://test.pypi.org/simple/ buyholdsell==1.9.6
 
 ## Usage
 
-from buyholdsell.tsclean import tsclean
+from buyholdsell.ttclean import ttclean
 
-Use the tsclean() function to clean 
+Use the ttclean() function to clean 
 
 train and test time series data frames.
 
