@@ -1,4 +1,4 @@
-# readnsplit.py
+# readcsvsplit.py
 
 
 

@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="buyholdsell",  # the name that you will install via pip
-    version="1.9.2",
+    version="1.9.3",
     author="John Dailey",
     author_email="johnjdailey@email.com",
     description="Cleans train and test time series data frames. Give an input and the package function tells you if it will buy, hold, or sell.",
