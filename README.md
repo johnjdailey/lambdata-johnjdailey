@@ -3,7 +3,7 @@
 
 ## Installation
 
-!pip install -i https://test.pypi.org/simple/ buyholdsell==1.9.3
+!pip install -i https://test.pypi.org/simple/ buyholdsell==1.9.4
 
 ## Usage
 

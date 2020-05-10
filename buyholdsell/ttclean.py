@@ -66,5 +66,5 @@ def ttclean(X):
         return X
 
 # Apply the function to the train and test data frames
-train = tsclean(train)
-test = tsclean(test)
+train = ttclean(train)
+test = ttclean(test)
