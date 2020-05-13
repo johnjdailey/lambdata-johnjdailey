@@ -10,8 +10,11 @@ class MyFrame(DataFrame):
         """
         names_map = {"CA": "Cali", "CO": "Colo", "CT": "Conn"}
         self["name"] = self["abbrev"].map(names_map)
+        # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html
 
 if __name__ == '__main__':
+
+    #df = DataFrame({"abbrev":["CA","CO","CT","DC","TX"]})
 
     my_frame = MyFrame({"abbrev": ["CA", "CO", "CT", "CT", "DC", "TX"]})
     print(my_frame.columns)

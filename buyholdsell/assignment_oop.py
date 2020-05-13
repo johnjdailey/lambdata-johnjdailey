@@ -16,6 +16,7 @@ class DataProcessor():
         names_map = {"CA": "Cali", "CO": "Colo", "CT": "Conn"}
         # type(my_df["abbrev"]) # -> pandas.core.series.Series'
         self.df["name"] = self.df["abbrev"].map(names_map)
+        # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.htmlS
 
 
 if __name__ == '__main__':
