@@ -1,6 +1,8 @@
 # urlcsvsplit.py
 
 
+# Self explanatory. If not, please, get out my codebase.
+
 # Import
 import pandas as pd
 

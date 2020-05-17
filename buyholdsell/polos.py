@@ -7,6 +7,7 @@ class Polo:
         self.color = color
         self.price = price
 
+    """ Wash the polo, stay fresh"""
     def wash(self):
         print(f"WASHING THE {self.size.upper()} {self.color.upper()} POLO!")
 

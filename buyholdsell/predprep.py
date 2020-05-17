@@ -1,6 +1,10 @@
 # predprep.py
 
 
+# This is the coherent code for preparing data for predictions,
+# the premise of the package which is separated into different
+# modules for easier understanding and use by the user.
+
 # Import Packages
 import pandas as pd
 import numpy as np

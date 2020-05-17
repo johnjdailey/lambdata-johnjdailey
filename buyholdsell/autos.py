@@ -9,9 +9,11 @@ class Auto():
         self.color = color
         self.num_wheels = num_wheels
 
+    """Washes the car"""
     def wash(self):
         print("WASHING THE CAR")
 
+    """Drives the car"""
     def drive(self):
         print("WE ARE DRIVING", self.model)
 
@@ -20,7 +22,8 @@ class Truck(Auto):
     def __init__(self, make, model, year, color, num_wheels, bed_size):
         super().__init__(make, model, year, color, num_wheels)
         self.bed_size = bed_size
-
+    
+    """Drives the truck"""
     def drive(self):
         print("WE ARE DRIVING", self.model, "WITH BED SIZE:", self.bed_size)
 

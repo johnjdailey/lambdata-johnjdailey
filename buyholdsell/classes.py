@@ -11,9 +11,11 @@ class Stocks():
         self.Adj_Close = Adj_Close
         self.Volume = Volume
 
+    """ Buys Stock"""
     def buyStock(self):
         print("Buying", self.Stock)
 
+    """ Sells Stock"""
     def sellStock(self):
         print("Selling", self.Stock)
 
@@ -22,9 +24,11 @@ class Cryptos(Stocks):
     def __init__(self, Date, Open, High, Low, Close, Adj_Close, Volume):
         super().__init__(Date, Open, High, Low, Close, Adj_Close, Volume)
 
+    """ Buys crypto, peer to peer """
     def buyCrypto(self):
         print("Buying peer to peer")
-
+    
+    """ Sells crypto, peer to peer"""
     def sellCrypto(self):
         print("Selling peer to peer")
 

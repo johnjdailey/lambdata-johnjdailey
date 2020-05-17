@@ -1,6 +1,9 @@
 # RSI.py
 
 
+# This code plays with Relative Strength Index trading strategy.
+
+
 def buyholdsell(n):
     """
     Param n is a number.

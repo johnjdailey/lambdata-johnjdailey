@@ -1,6 +1,8 @@
 # mlfeat.py
 
 
+# Experiment for ml prep after data cleaning in package
+
 # Assign a target for predictive modeling
 target = 'High'
 
